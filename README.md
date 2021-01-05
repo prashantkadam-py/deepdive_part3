@@ -14,4 +14,9 @@
   - Important :
         - two objects that do not compare equal may still have the same hash. (Hash Collisions)
         - more hash collisions slower dictionaries.
+       
+## Custom Class : 
+    - __eq__ : implement equal to method to compare object.
+    - __hash__ : If we define __eq__ and not __hash__ then its value is None which indicates class is not hashable.
+    
         
