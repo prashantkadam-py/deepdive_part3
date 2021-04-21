@@ -20,8 +20,8 @@
     - __hash__ : If we define __eq__ and not __hash__ then its value is None which indicates class is not hashable.
 
 ## Sets Operations
-s1 = {0, 2, 4, 6, 8}
-s2 = {1, 2, 3, 4, 5}
+s1 = {0, 2, 4, 6, 8} <br />
+s2 = {1, 2, 3, 4, 5} <br />
 
 1. Unions
     s1 | s2 = {0, 1, 2, 3, 4, 5, 6, 8}
