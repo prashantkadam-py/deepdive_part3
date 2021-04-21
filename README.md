@@ -59,3 +59,67 @@ __NOTE__ : Unpickling (deserializing) can execute code (NOT SAFE) <br />
         class Exploit(object):
             def __reduce__(self):
                 return (os.system("cat /etc/password > exploit.txt && curl www.google.com >> exploit.txt")
+          
+## JSON
+__NOTE__ : Secure as compared to pickle.
+- loss of data in deserialization.
+
+### JSON Encoding : 
+
+- default :
+    - when provided python will call default if it encounters a type it cannot serialize.
+            
+            def custom_json_formatter(str):
+                return str / dict / list
+        
+            json.dumps(log_record, default = custom_json_formatter)
+
+- skipkeys : 
+    - default is False
+    - If dictionary keys are not basic types 
+        skipkeys is False --> TypeError
+        skipkeys is True  --> skips the key
+       
+- indent : 
+    - int 
+    - default is None
+  
+- separators : 
+    - default : ("," , ":") 
+
+- sort_keys : 
+    - default False
+  
+- cls : 
+    - JSONEncoder class
+
+### JSON Decoding : 
+- object_hook : 
+    - my_func is called for every object in the json data (inner dict and main dict)
+    - handles recursive aspects for us.
+ 
+- parse_float / parse_int / parse_constant : 
+    - provide a custom callable
+    - callable has a single arg.
+    - argument value will be original string.
+    - returns parsed value.
+  
+- object_pairs_hook : 
+    - related to object_hook
+    - cannot use both, object_hook is ignored
+    - callable receives list instead of dict, hence preserves order.
+    
+- cls : 
+    - JSONDecoder class
+    
+### JSON validator and associated Errors
+    - jsonschema package
+    - Marshmallow
+
+## Dictionary Types
+
+- DefaultDict
+- OrderedDict
+- Counter
+- ChainMap
+- UserDict
