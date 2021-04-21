@@ -49,3 +49,13 @@ s2 = {1, 2, 3, 4, 5} <br />
     s1 = {1, 3, 5} <br />
     s2 = {2, 4, 6} <br />
     s1.isdisjoint(s2) <br />
+    
+## Pickling
+
+__NOTE__ : Unpickling (deserializing) can execute code (NOT SAFE) <br />
+- Shared references are maintained in deserialization.
+- recursive objects can be pickled.
+
+class Exploit(object):
+    def __reduce__(self):
+        return (os.system("cat /etc/password > exploit.txt && curl www.google.com >> exploit.txt")
