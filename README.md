@@ -23,29 +23,29 @@
 s1 = {0, 2, 4, 6, 8} <br />
 s2 = {1, 2, 3, 4, 5} <br />
 
-1. Unions
-    s1 | s2 = {0, 1, 2, 3, 4, 5, 6, 8}
+1. Unions <br />
+    s1 | s2 = {0, 1, 2, 3, 4, 5, 6, 8} <br />
 
-2. Intersections
-    s1 & s2 = {2, 4}
+2. Intersections <br />
+    s1 & s2 = {2, 4} <br />
     
-3. Differences
-    s1 - s2 = {8, 0, 6}
+3. Differences <br />
+    s1 - s2 = {8, 0, 6} <br />
     
-4. Symmetric Differences
-    s1 ^ s2 = {0, 1, 3, 5, 6, 8}
+4. Symmetric Differences <br />
+    s1 ^ s2 = {0, 1, 3, 5, 6, 8} <br />
     
-5. Subsets
-    s1 = {1, 2, 3, 4}
-    s2 = {1, 2, 3, 4, 5, 6}
-    s1 <= s2  - True
+5. Subsets <br />
+    s1 = {1, 2, 3, 4} <br />
+    s2 = {1, 2, 3, 4, 5, 6} <br />
+    s1 <= s2  - True <br />
 
-6. Supersets
-    s1 = {1, 2, 3, 4}
-    s2 = {1, 2}
-    s1 >= s2 - True
+6. Supersets <br />
+    s1 = {1, 2, 3, 4} <br />
+    s2 = {1, 2} <br />
+    s1 >= s2 - True <br />
     
-7. disjointness
-    s1 = {1, 3, 5}
-    s2 = {2, 4, 6}
-    s1.isdisjoint(s2)
+7. disjointness <br />
+    s1 = {1, 3, 5} <br />
+    s2 = {2, 4, 6} <br />
+    s1.isdisjoint(s2) <br />
